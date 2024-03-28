@@ -1,11 +1,8 @@
 function criaCalculadora() {   
-    
     return {
-
         display: document.querySelector('.display'),
 
-        inicia() {            
-
+        inicia() {           
             this.cliqueBotoes()
             this.pressionaEnter()
         },
@@ -26,9 +23,6 @@ function criaCalculadora() {
         },
 
         cliqueBotoes() {
-
-            
-
             document.addEventListener('click', function(event){
                 const element = event.target          
 
@@ -52,12 +46,10 @@ function criaCalculadora() {
         },
 
         btnParaDisplay(valor) {
-
             if(this.display.classList.contains('resultado')){
                 this.display.setAttribute('class','display')
                 this.btnClear()
             }
-
             this.display.value += valor
         },
 
@@ -75,8 +67,6 @@ function criaCalculadora() {
             this.display.value = eval(conta)
             this.display.setAttribute('class','resultado')
         }
-
-
     }
 }
 
