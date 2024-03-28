@@ -4,9 +4,7 @@ function criaCalculadora() {
 
         display: document.querySelector('.display'),
 
-        inicia() {
-
-            
+        inicia() {            
 
             this.cliqueBotoes()
             this.pressionaEnter()
@@ -14,6 +12,12 @@ function criaCalculadora() {
 
         pressionaEnter() {
             this.display.addEventListener('keypress', function(event){
+
+                if(this.display.classList.contains('resultado')){
+                    this.display.setAttribute('class','display')
+                    this.btnClear()
+                }
+
                 if(event.keyCode === 13) {
                     console.log('vsf')
                     this.realizaConta()
