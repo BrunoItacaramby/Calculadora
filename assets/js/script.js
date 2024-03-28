@@ -1,21 +1,21 @@
-function criaCalculadora() {   
+function criaCalculadora() {
     return {
         display: document.querySelector('.display'),
 
-        inicia() {           
+        inicia() {
             this.cliqueBotoes()
             this.pressionaEnter()
         },
 
         pressionaEnter() {
-            this.display.addEventListener('keypress', function(event){
+            this.display.addEventListener('keypress', function (event) {
 
-                if(this.display.classList.contains('resultado')){
-                    this.display.setAttribute('class','display')
+                if (this.display.classList.contains('resultado')) {
+                    this.display.setAttribute('class', 'display')
                     this.btnClear()
                 }
 
-                if(event.keyCode === 13) {
+                if (event.keyCode === 13) {
                     console.log('vsf')
                     this.realizaConta()
                 }
@@ -23,22 +23,22 @@ function criaCalculadora() {
         },
 
         cliqueBotoes() {
-            document.addEventListener('click', function(event){
-                const element = event.target          
+            document.addEventListener('click', function (event) {
+                const element = event.target
 
-                if(element.classList.contains('btn-num')){
+                if (element.classList.contains('btn-num')) {
                     this.btnParaDisplay(element.innerText)
                 }
 
-                if(element.classList.contains('btn-del')){
+                if (element.classList.contains('btn-del')) {
                     this.btnDel()
                 }
 
-                if(element.classList.contains('btn-clear')){
+                if (element.classList.contains('btn-clear')) {
                     this.btnClear()
                 }
 
-                if(element.classList.contains('btn-eq')){
+                if (element.classList.contains('btn-eq')) {
                     this.realizaConta()
                 }
 
@@ -46,8 +46,8 @@ function criaCalculadora() {
         },
 
         btnParaDisplay(valor) {
-            if(this.display.classList.contains('resultado')){
-                this.display.setAttribute('class','display')
+            if (this.display.classList.contains('resultado')) {
+                this.display.setAttribute('class', 'display')
                 this.btnClear()
             }
             this.display.value += valor
@@ -63,9 +63,9 @@ function criaCalculadora() {
         },
 
         realizaConta() {
-            let conta = this.display.value          
+            let conta = this.display.value
             this.display.value = eval(conta)
-            this.display.setAttribute('class','resultado')
+            this.display.setAttribute('class', 'resultado')
         }
     }
 }
