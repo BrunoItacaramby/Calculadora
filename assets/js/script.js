@@ -16,7 +16,6 @@ function criaCalculadora() {
                 }
 
                 if (event.keyCode === 13) {
-                    console.log('vsf')
                     this.realizaConta()
                 }
             }.bind(this));
@@ -51,6 +50,7 @@ function criaCalculadora() {
                 this.btnClear()
             }
             this.display.value += valor
+            this.display.focus()
         },
 
         btnDel() {
