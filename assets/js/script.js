@@ -3,6 +3,7 @@ function criaCalculadora() {
         display: document.querySelector('.display'),
 
         inicia() {
+            this.display.value = '0'
             this.cliqueBotoes()
             this.pressionaEnter()
         },
@@ -24,7 +25,6 @@ function criaCalculadora() {
         cliqueBotoes() {
             document.addEventListener('click', function (event) {
                 const element = event.target
-                console.log(event)
 
                 if (event.detail === 1) {
                     event.preventDefault()
@@ -55,6 +55,11 @@ function criaCalculadora() {
                 this.display.setAttribute('class', 'display')
                 this.btnClear()
             }
+
+            if(this.display.value === '0'){
+                this.display.value = ''
+            }
+
             this.display.value += valor
             this.display.focus()
         },
@@ -64,11 +69,16 @@ function criaCalculadora() {
         },
 
         btnClear() {
-            this.display.value = ''
+            this.display.value = '0'
             this.display.focus()
         },
 
         realizaConta() {
+
+            if(!this.display.value){
+                this.display.value = '0'
+            }
+
             let conta = this.display.value
             this.display.value = eval(conta)
             this.display.setAttribute('class', 'resultado')
