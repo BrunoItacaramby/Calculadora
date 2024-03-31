@@ -25,11 +25,11 @@ function criaCalculadora() {
             document.addEventListener('click', function (event) {
                 const element = event.target
 
-                if(event.detail === 2){
-                    event.preventDefault()
-                }
 
                 if (element.classList.contains('btn-num')) {
+                    if(event.detail === 2){
+                        event.preventDefault()
+                    }
                     this.btnParaDisplay(element.innerText)
                 }
 
@@ -49,6 +49,7 @@ function criaCalculadora() {
         },
 
         btnParaDisplay(valor) {
+
             if (this.display.classList.contains('resultado')) {
                 this.display.setAttribute('class', 'display')
                 this.btnClear()
