@@ -25,6 +25,10 @@ function criaCalculadora() {
             document.addEventListener('click', function (event) {
                 const element = event.target
 
+                if(event.detail === 2){
+                    event.preventDefault()
+                }
+
                 if (element.classList.contains('btn-num')) {
                     this.btnParaDisplay(element.innerText)
                 }
