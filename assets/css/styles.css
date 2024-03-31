@@ -52,7 +52,7 @@ button {
     border: none;
     cursor: pointer;
     width: 100%;
-    padding: 4vw 1.5vw;
+    padding: min(4vw, 30px);
     font-size: min(6vw, 40px);
 }
 
@@ -62,7 +62,7 @@ button:hover {
 
 input {
     width: 100%;
-    padding: 2vw 0.8vw;
+    padding: min(2vw, 15px);
     font-size: min(8vw, 40px);
     text-align: right;
     margin-bottom: 10px;
