@@ -30,11 +30,10 @@ function criaCalculadora() {
                     event.preventDefault()
                 }
 
-
                 if (element.classList.contains('btn-num')) {
-                    if(event.detail === 1){
-                        event.preventDefault()
-                    }
+                    // if(event.detail === 1){
+                    //     event.preventDefault()
+                    // }
                     this.btnParaDisplay(element.innerText)
                 }
 
