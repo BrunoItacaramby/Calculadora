@@ -11,7 +11,7 @@ button {
 }
 
 h1 {
-    font-size: min(12vw, 70px);
+    font-size: min(10vw, 70px);
 }
 
 body {
@@ -39,7 +39,7 @@ body {
 }
 
 .content h1 {
-    padding: 35px 0;
+    padding: 15px 0;
 }
 
 table {
@@ -52,7 +52,7 @@ button {
     border: none;
     cursor: pointer;
     width: 100%;
-    padding: 1vw;
+    padding: 4vw 1.5vw;
     font-size: min(6vw, 40px);
 }
 
@@ -62,7 +62,7 @@ button:hover {
 
 input {
     width: 100%;
-    padding: 1vw 0.8vw;
+    padding: 2vw 0.8vw;
     font-size: min(8vw, 40px);
     text-align: right;
     margin-bottom: 10px;
