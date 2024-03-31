@@ -26,14 +26,11 @@ function criaCalculadora() {
                 const element = event.target
                 console.log(event)
 
-                if(event.detail === 1){
+                if (event.detail === 1) {
                     event.preventDefault()
                 }
 
                 if (element.classList.contains('btn-num')) {
-                    // if(event.detail === 1){
-                    //     event.preventDefault()
-                    // }
                     this.btnParaDisplay(element.innerText)
                 }
 
