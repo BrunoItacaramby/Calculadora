@@ -24,10 +24,15 @@ function criaCalculadora() {
         cliqueBotoes() {
             document.addEventListener('click', function (event) {
                 const element = event.target
+                console.log(event)
+
+                if(event.detail === 1){
+                    event.preventDefault()
+                }
 
 
                 if (element.classList.contains('btn-num')) {
-                    if(event.detail === 2){
+                    if(event.detail === 1){
                         event.preventDefault()
                     }
                     this.btnParaDisplay(element.innerText)
