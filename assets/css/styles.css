@@ -11,12 +11,7 @@ button {
 }
 
 h1 {
-    font-size: min(8vw, 70px);
-}
-
-span {
-    font-weight: bolder;
-    font-size: min(8vw, 28px);
+    font-size: min(12vw, 70px);
 }
 
 body {
@@ -38,7 +33,7 @@ body {
 }
 
 .content {
-    width: 600px;
+    max-width: 100%;
     margin: 0 20px;
     padding-bottom: 15px;
 }
