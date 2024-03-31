@@ -56,7 +56,7 @@ function criaCalculadora() {
                 this.btnClear()
             }
 
-            if(this.display.value === '0'){
+            if (this.display.value === '0') {
                 this.display.value = ''
             }
 
@@ -75,7 +75,7 @@ function criaCalculadora() {
 
         realizaConta() {
 
-            if(!this.display.value){
+            if (!this.display.value) {
                 this.display.value = '0'
             }
 
